@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" href="FCC_css/survey.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="title">Survey</h1>
+
+    <p id="description">Please fill out the following survey for us to serve you better:</p>
+
+    <!-- Start of Survey Form -->
+
+    <form id="survey-form" method="GET" action=>
+
+        <!-- Name Line -->
+        <div class="row">
+            <div class="column left-half">
+                <p class=labels>*Name:</p>
+            </div>
+            <div class="column right-half">
+                <label for="name" id="name-label">
+                    <input type="text" id="name" name="userName" placeholder="First and Last Name" required>
+                </label>
+            </div>
+        </div>
+
+        <!-- Email Line -->
+        <div class="row">
+            <div class="column left-half">
+                <p class="labels">*Email Address:</p>
+            </div>
+            <div class="column right-half">
+                <label for="email" id="email-label">
+                    <input type="email" id="email" name="email" placeholder="name@email.com" required>
+                </label>
+            </div>
+        </div>
+
+        <!-- Age Line -->
+        <div class="row">
+            <div class="column left-half">
+                <p class="labels">*Age</p>
+            </div>
+            <div class="column right-half">
+                <label for="number" id="number-label">
+                    <input type="number" id="number" name="number" placeholder="Age" min="1" max="3" required>
+                </label>
+            </div>
+        </div>
+
+        <!-- Employment Dropdown -->
+        <div class="row">
+            <div class="column left-half">
+                <p class="labels employment">What is your current employment status?</p>
+            </div>
+            <div class="column right-half">
+                <label for="currentSituation">
+                    <select id="dropdown" name="currentSituation" class="currentSituation" placeholder="Please select one: "></label>
+                <option disabled value>Please select one: </option>
+                <option value="studentFT">Full Time Student</option>
+                <option value="studentPT">Part Time Student</option>
+                <option value="fullTime">Full Time Employment</option>
+                <option value="partTime">Part Time Employment</option>
+                <option value="unemployed">Unemployed</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Satisfaction Radio Buttons -->
+        <div class="row">
+            <div class="column left-half">
+                <p class="labels">How satisfied are you with the current product?</p>
+            </div>
+            <div class="column right-half">
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="notAtAll">
+                            <input type="radio" name="satisfaction" id="notAtAll" value="satisfaction">
+                        </label>
+                    </div>
+                    <div class="column smaller-right">
+                        <p id="notAtAll">Not at all</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="fair">
+                            <input type="radio" name="satisfaction" id="fair" value="satisfaction">
+                        </label>
+                    </div>
+                    <div class="column smaller-right">
+                        <p id="fair">Fairly Satisfied</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="satisfied">
+                            <input type="radio" name="satisfaction" id="satisfied" value="satisfaction">
+                        </label>
+                    </div>
+                    <div class="column smaller-right">
+                        <p id="satisfied">Satisfied</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="verySatisfied">
+                            <input type="radio" name="satisfaction" id="verySatisfied" value="satisfaction">
+                        </label>
+                    </div>
+                    <div class="column smaller-right">
+                        <p id="verySatisfied">Very Satisfied</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="row">
+            <div class="column left-half">
+                <p class="labels">Which products would you purchase in the future? Select all that apply: </p>
+            </div>
+            <div class="column right-half">
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="product1">
+                            <input type="checkbox" id="product1" name="product1" value="product1"></label>
+                    </div>
+                    <div class="column smaller-right">
+                        <p id="product1">Jewelry</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="product2">
+                            <input type="checkbox" id="product2" name="product2" value="product2">
+                        </label>
+                    </div>
+                    <div class="column smaller-right">
+                        <p id="product2">Electronics</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="product3">
+                            <input type="checkbox" id="product3" name="product3" value="product3">
+                        </label>
+                    </div>
+                    <div class="column smaller-right">
+                        <p id="product3">Car</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column smaller-left">
+                        <label for="product4">
+                            <input type="checkbox" id="product4" name="product4" value="product4">
+                        </label>
+                    </div>
+                    <div class="column smaller-right">
+                        <label for="writeIn">
+                            <input type="text" id="other" name="other" placeholder="Other">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Area -->
+        <div class="row">
+            <div class="column left-half">
+                <p class="labels">Additional comments: </p>
+            </div>
+            <div class="column right-half">
+                <label for="additionalComments">
+                    <textarea id="additionalComments" rows="10" cols="50"></textarea>
+                </label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit">
+            <button id="submit" type="submit">Submit</button>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
