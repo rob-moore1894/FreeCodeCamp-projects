@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
-h1 {
-  background-color: blue;
+#welcome-section {
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  background-image: url("/FCC_images/rob_moore_profile_3.jpeg");
+  background-repeat: no-repeat;
 }
+
+.navbar {
+  color: white;
+}
+
+/* User Story #9: My portfolio should have at least one media query. */
+/* User Story #10: The height of the welcome section should be equal to the height of the viewport. */
+/* User Story #11: The navbar should always be at the top of the viewport. */
