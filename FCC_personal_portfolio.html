@@ -13,47 +13,71 @@
     <!-- User Story #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
     <!-- User Story #11: The navbar should always be at the top of the viewport. -->
 
+    <div id="wrapper">
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-secondary">
-      <a class="navbar-brand" href="#">
-    <img src="FCC_images/rob_moore_profile_1.jpeg" width="45" height="30" alt="">
-  </a>
-      <a class="navbar-brand" href="#">Rob Moore</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#welcome-section">Welcome<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#projects">Projects</a>
-          <a class="nav-item nav-link" href="#">Pricing</a>
-          <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </div>
-      </div>
-    </nav>
+          <a class="navbar-brand" href="#welcome">Rob Moore</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#welcome-section">Welcome<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#projects">Projects</a>
+            </div>
+          </div>
+        </nav>
 
-    <!-- User Story #1: My portfolio should have a welcome section with an id of welcome-section. -->
-    <!-- User Story #2: The welcome section should have an h1 element that contains text. -->
-    <!-- User Story #10: The height of the welcome section should be equal to the height of the viewport. -->
-    <section id="welcome-section">
-      <h1>Hi, I'm Rob Moore</h1>
-      <h3>Web Developer</h3>
-      <p>This webpage was built from the ground up utilizing Atom Text Editor, and styled through Bootstrap.  This is a project from <a href="https://www.freecodecamp.org">FreeCodeCamp.org</a>. </p>
-    </section>
+        <!-- User Story #1: My portfolio should have a welcome section with an id of welcome-section. -->
+        <!-- User Story #2: The welcome section should have an h1 element that contains text. -->
+        <!-- User Story #10: The height of the welcome section should be equal to the height of the viewport. -->
 
-      <!-- User Story #3: My portfolio should have a projects section with an id of projects. -->
-      <!-- User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project. -->
-      <!-- User Story #5: The projects section should contain at least one link to a project. -->
+          <section id="welcome-section">
+            <h1>Hi, I'm Rob Moore</h1>
+            <h3>Web Developer</h3>
+            <p>This webpage was built from the ground up utilizing Atom Text Editor, and styled with Bootstrap.  This is a project from <a href="https://www.freecodecamp.org">FreeCodeCamp.org</a>. </p>
+          </section>
+    </div>
+          <!-- User Story #3: My portfolio should have a projects section with an id of projects. -->
+          <!-- User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project. -->
+          <!-- User Story #5: The projects section should contain at least one link to a project. -->
 
-    <section id="projects">
-      <div class="project-tile">
-        <a href="https://chores-allowance.glitch.me/">Chores/Allowance Calculator Project</a>
-      </div>
-    </section>
+        <section id="projects">
+          <div class="project-tile card">
+            <div class="card-header">
+              <h2>Projects - <em>In Progress</em></h2>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Chores/Allowance Calculator</h5>
+                      <p class="card-text">This responsive web design will take in a child's name, the chores they are expected to perform, and calculate the amount of allowance they are expected to earn.  All inputs are parent/guardian driven.  The parent/guardian is required to confirm that the child completed the tasks before being able to submit the form.</p>
+                      <a href="https://chores-allowance.glitch.me/" target="_blank" class="btn btn-primary">View the Live Project</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <!--
-User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab.
+        <!--
+    User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab.
+    -->
+        <footer class="card-footer text-center bg-secondary">
+          <div class="contact">
+            <span>If you would like to see more of my work, please feel free to view my <a href="https://www.freecodecamp.org/rob-moore1894" id="profile-link" target="_blank">Free Code Camp Profile</a>.
+          </div>
+        </footer>
 
--->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

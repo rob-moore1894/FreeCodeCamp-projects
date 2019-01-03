@@ -2,17 +2,63 @@
   box-sizing: border-box;
 }
 
-#welcome-section {
-  text-align: center;
-  width: 20%;
-  margin: 0 auto;
-  background-image: url("/FCC_images/rob_moore_profile_3.jpeg");
-  background-repeat: no-repeat;
-}
-
 .navbar {
   color: white;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
+
+#welcome-section {
+  width: 90%;
+  text-align: center;
+  margin: .5rem auto;
+}
+
+#projects {
+  width: 80%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+h1, h2, h3, h5 {
+  color: black;
+}
+
+.card-header {
+   margin-bottom: .5rem;
+   border: 1px solid lightgray;
+}
+
+.card {
+  padding: .5rem;
+}
+
+.btn:hover {
+  opacity: .5;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+  #wrapper {
+    height: 100vh;
+  }
+
+  #welcome-section {
+    height: 100vh;
+    width: 20%;
+    display: block;
+    margin-top: 25vh;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+  }
+
+
+}
+
 
 /* User Story #9: My portfolio should have at least one media query. */
 /* User Story #10: The height of the welcome section should be equal to the height of the viewport. */
