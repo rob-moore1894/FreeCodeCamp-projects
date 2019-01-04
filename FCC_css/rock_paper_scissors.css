@@ -16,6 +16,17 @@ h1 {
   color: #24272E;
 }
 
+.instructions > p {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  margin: 1rem auto;
+}
+
 .score-board {
   border: 3px solid white;
   width: 30%;

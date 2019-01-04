@@ -1,63 +1,66 @@
 $(document).ready(function(){
   let userScore = 0;
   let computerScore = 0;
-  // // const userScore_span = $('#user-score');
-  // // const computerScore_span = $('#computer-score');
-  // const scoreBoard = $('.score-board');
-  // const gameResult = $('.result');
-  // const rock = $('#rock');
-  // const paper = $('#paper');
-  // const scissors = $('#scissors');
 
 function getComputerChoice() {
-  const computerSelect = ['r', 'p', 's'];
-  const randomNumber = Math.floor(Math.random() * 3);
+  const computerSelect = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
+  const randomNumber = Math.floor(Math.random() * 5);
   return computerSelect[randomNumber];
 }
 
   function game(userChoice){
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
-      case 'rs':
-      case 'pr':
-      case 'sp':
+      case 'RockScissors':
+      case 'RockLizard':
+      case 'PaperRock':
+      case 'PaperSpock':
+      case 'ScissorsPaper':
+      case 'ScissorsLizard':
+      case 'LizardSpock':
+      case 'LizardPaper':
+      case 'SpockScissors':
+      case 'SpockRock':
         console.log("USER WINS");
         userWin(userChoice, computerChoice);
         break;
-      case 'rp':
-      case 'ps':
-      case 'sr':
+      case 'RockPaper':
+      case 'RockSpock':
+      case 'PaperScissors':
+      case 'PaperLizard':
+      case 'ScissorsRock':
+      case 'ScissorsSpock':
+      case 'LizardScissors':
+      case 'LizardRock':
+      case 'SpockPaper':
+      case 'SpockLizard':
         console.log("COMPUTER WINS");
         computerWin(userChoice, computerChoice);
         break;
-      case 'rr':
-      case 'pp':
-      case 'ss':
+      case 'RockRock':
+      case 'PaperPaper':
+      case 'ScissorsScissors':
+      case 'LizardLizard':
+      case 'SpockSpock':
         console.log("DRAW");
         draw();
         break;
     }
   }
 
-  function convertToWord(letter){
-    if (letter === 'r') return "Rock";
-    if (letter === 'p') return "Paper";
-    return "Scissors";
-  }
-
   function userWin(user, computer){
     userScore++;
     console.log(userScore);
     $('#user-score').text(userScore);
-    $('.result').html(`User Choice: ${convertToWord(user)}<br /> Computer Choice: ${convertToWord(computer)} <br /> You win!`);
+    $('.result').html(`User Choice: ${user}<br /> Computer Choice: ${computer} <br /> You win!`);
   }
 
   function computerWin(user, computer){
     computerScore++;
     console.log(computerScore);
     $('#computer-score').text(computerScore);
-      $('.result').html(`Computer Choice: ${convertToWord(computer)}<br />
-       User Choice:  ${convertToWord(user)}<br />
+      $('.result').html(`Computer Choice: ${computer}<br />
+       User Choice:  ${user}<br />
        Computer wins!`);
   }
 
@@ -67,15 +70,23 @@ function getComputerChoice() {
   }
 
   $('#rock').click(function(){
-    game('r');
+    game('Rock');
   })
 
   $('#paper').click(function(){
-    game('p');
+    game('Paper');
   })
 
   $('#scissors').click(function(){
-    game('s');
+    game('Scissors');
+  })
+
+  $('#lizard').click(function(){
+    game('Lizard');
+  })
+
+  $('#spock').click(function(){
+    game('Spock');
   })
 
 });
