@@ -21,7 +21,6 @@ function getComputerChoice() {
       case 'LizardPaper':
       case 'SpockScissors':
       case 'SpockRock':
-        console.log("USER WINS");
         userWin(userChoice, computerChoice);
         break;
       case 'RockPaper':
@@ -34,7 +33,6 @@ function getComputerChoice() {
       case 'LizardRock':
       case 'SpockPaper':
       case 'SpockLizard':
-        console.log("COMPUTER WINS");
         computerWin(userChoice, computerChoice);
         break;
       case 'RockRock':
@@ -42,7 +40,6 @@ function getComputerChoice() {
       case 'ScissorsScissors':
       case 'LizardLizard':
       case 'SpockSpock':
-        console.log("DRAW");
         draw();
         break;
     }
@@ -50,14 +47,12 @@ function getComputerChoice() {
 
   function userWin(user, computer){
     userScore++;
-    console.log(userScore);
     $('#user-score').text(userScore);
     $('.result').html(`User Choice: ${user}<br /> Computer Choice: ${computer} <br /> You win!`);
   }
 
   function computerWin(user, computer){
     computerScore++;
-    console.log(computerScore);
     $('#computer-score').text(computerScore);
       $('.result').html(`Computer Choice: ${computer}<br />
        User Choice:  ${user}<br />
@@ -66,7 +61,6 @@ function getComputerChoice() {
 
   function draw(){
     $('.result').text(`Draw... no points awarded`);
-    console.log("DRAW");
   }
 
   $('#rock').click(function(){
